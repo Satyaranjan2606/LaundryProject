@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, 
+                         initial-scale=1.0">
+    <title>Login/Signup-page</title>
+    <link rel="stylesheet" 
+          href="css/style16.css">
+        <script>
+            function validate1()
+            {
+               var a=document.myform1.Lemail.value;
+               var b=document.myform1.Lpwd.value;
+
+               if(a==""||b=="")
+               {
+                   alert("Any of the field inside the form can't be blank");
+                   document.myform1.Lemail.focus();
+                   return false;
+               }  
+            }
+        </script>
+</head>
+  
+<body style="background-image:url(image/banner2.jpg);background-repeat: no-repeat;background-size: 1520px 725px;">
+    <header>
+        <h1 class="heading">Welcome To Laundry Management System</h1>
+    </header>
+
+    <div class="container">
+  
+        <div class="slider"></div>
+        <div class="btn">
+            <button class="login"><a href="Index.html" style="text-decoration: none;">Home</a></button>
+        </div>
+
+        <div class="form-section">
+         <form action="UserLogin.jsp" method="post" name="myform1">
+            <div class="login-box">
+                <input type="email" 
+                       class="email ele" 
+                       placeholder="Email@gmail.com" name="Gmail" id="Lemail">
+                <input type="password"
+                       class="password ele" 
+                       placeholder="Password" name="Pswd" id="Lpwd">
+                <input type="submit" value="Login" onclick="return validate1();" style="background: rgb(255, 146, 91);border:none;height: 60px;width: 150px;border-radius: 50px;cursor:pointer;">
+                <a href="forgot.html" style="text-decoration:none;">Forgot Password</a>
+             </div>
+
+          </form>
+        </div>
+    </div>
+</body>
+  
+</html>

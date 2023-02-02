@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, 
+                         initial-scale=1.0">
+    <title>Login/Signup-page</title>
+    <link rel="stylesheet" 
+          href="css/style16.css">
+        <script>
+            function validate()
+            {
+               var a=document.myform.fname.value;
+               var b=document.myform.femail.value;
+               var c=document.myform.fpwd.value;
+               var d=document.myform.fnum.value;
+
+               if(a==""||b==""||c==""||d=="")
+               {
+                   alert("Any of the field inside the form can't be blank");
+                   document.myform.fname.focus();
+                   return false;
+               }  
+            }
+        </script>
+</head>
+  
+<body style="background-image:url(image/banner2.jpg);background-repeat: no-repeat;background-size: 1520px 725px;">
+    <header>
+        <h1 class="heading">Welcome To Laundry Management System</h1>
+    </header>
+
+    <div class="container">
+  
+        <div class="slider"></div>
+        <div class="btn">
+            <button class="signup"><a href="Index.html" style="text-decoration:none;">Home</a></button>
+        </div>
+
+        <div class="form-section">             
+          <form action="Register.jsp" method="post" name="myform">
+            <div class="signup-box">
+                <input type="text" 
+                       class="name ele" 
+                       placeholder="Enter your name" name="Name" id="fname">
+                <input type="email" 
+                       class="email ele" 
+                       placeholder="Email@gmail.com" name="Email" id="femail">
+                <input type="password" 
+                       class="password ele" 
+                       placeholder="Password" name="Password" id="fpwd">
+                <input type="number" 
+                       class="password ele" 
+                       placeholder="Enter your number" name="Phonenumber" id="fnum">
+                <input type="submit" value="Register"  onclick="return validate();" style="background: rgb(255, 146, 91);border:none;height: 60px;width: 150px;border-radius: 50px;cursor:pointer;">
+            </div>
+          </form>
+        </div>
+    </div>
+</body>
+  
+</html>

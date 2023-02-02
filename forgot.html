@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image:url(image/banner3.jpg);background-repeat: no-repeat;background-size: 1520px 725px;">
+<form action="Forgotpassword.jsp" method="post" name="myform">
+    <table style="background-color:rgb(240, 220, 240);margin-top: -10px;border-radius: 15px;">
+        <tr>
+          <td><input type="number" name="Mobile" placeholder="Enter your mobile number" style="width:950px;border-radius:10px;height:30px;"></td>
+        </tr>
+        <tr>
+          <td><input type="Password" name="Newpass" placeholder="NewPassword"  style="width:950px;border-radius:10px;height:30px;"></td>
+        </tr>
+        <tr>
+         <td><input type="Password" name="confirm" placeholder="ConfirmPassword" style="width:950px;border-radius:10px;height:30px;"></td>
+        </tr>
+        <tr>
+          <td><input type="submit" Value="submit" style="background-color:rgb(13, 127, 85);color:white;border-radius:5px;width:70px;cursor:pointer;" onclick="return validate()"></td>
+          <td><a href="Index.html" style="text-decoration: none;">Return to home?</a></td>
+        </tr> 
+    </table>
+</form>
+    <script>
+		function validate()
+		{
+			var a=document.myform.Mobile.value;
+            var b=document.myform.Newpass.value;
+			var c=document.myform.confirm.value;
+
+            if(a=="")
+			{
+               alert("Please enter you mobile number");
+			   document.myform.Mobile.focus();
+			   return false;
+			}
+			if(b=="")
+			{
+				alert("Please enter your new password");
+			   document.myform.Newpass.focus();
+			   return false;
+			}
+			if(c=="")
+			{
+				alert("Please confirm password");
+			   document.myform.confirm.focus();
+			   return false;
+			}
+			if(b!=c)
+			{
+				alert("Password miss match");
+				document.myform.confirm.focus();
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
